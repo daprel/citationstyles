@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Harvard - Inderscience Custom</title>
+    <id>http://www.zotero.org/styles/harvard-inderscience-custom</id>
+    <author>
+      <name>Custom Generated</name>
+    </author>
+    <category citation-format="author-date"/>
+    <updated>2026-05-01</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" quotes="true"/>
+  </macro>
+
+  <macro name="journal">
+    <text variable="container-title"/>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <citation>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group>
+        <text macro="author"/>
+        <text macro="issued" prefix=", "/>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography hanging-indent="true">
+    <layout suffix=".">
+      <group delimiter=" ">
+        <text macro="author"/>
+        <text macro="issued" prefix=" (" suffix=")"/>
+        <text macro="title"/>
+        <text macro="journal"/>
+        <text variable="volume" prefix=", Vol. "/>
+        <text variable="issue" prefix=", No. "/>
+        <text variable="page" prefix=", pp."/>
+        <text variable="DOI" prefix=", DOI: "/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
