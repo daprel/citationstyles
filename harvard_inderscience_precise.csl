@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Harvard - Inderscience Precise</title>
+    <id>http://www.zotero.org/styles/harvard-inderscience-precise</id>
+    <category citation-format="author-date"/>
+    <updated>2026-05-01</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" prefix="‘" suffix="’"/>
+  </macro>
+
+  <macro name="journal">
+    <text variable="container-title"/>
+  </macro>
+
+  <citation>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group>
+        <names variable="author">
+          <name form="short" and="text"/>
+          <et-al term="et-al"/>
+        </names>
+        <date variable="issued" prefix=", ">
+          <date-part name="year"/>
+        </date>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography hanging-indent="true">
+    <layout suffix=".">
+      <group delimiter=" ">
+        <text macro="author"/>
+        <text macro="issued" prefix=" (" suffix=")"/>
+        <text macro="title"/>
+        <text macro="journal"/>
+        <text variable="volume" prefix=", Vol. "/>
+        <text variable="issue" prefix=", No. "/>
+        <text variable="page" prefix=", pp."/>
+        <text variable="DOI" prefix=", DOI: "/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
